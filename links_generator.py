@@ -4,27 +4,21 @@ contact: gustavo.oceanografia@gmail.com
 """
 
 # class Hycom Link Creator
-
 from dates_generator import DatesGenerator
 time_creator = DatesGenerator()
 
 class Hycom_Link_Creator:
     
-    def __init__(self, url, time_start, time_end, time_step):
+    def __init__(self, url, time_start, time_end):
         self._links = []
-        
         self.url = url
-        
         self.time_end = time_end
-        
-        self.time_step = time_step
-        
         self.time_start = time_start
 
        
     def create_dates(self):
         self.dates = time_creator.generateDates(self.time_start,
-        self.time_end, self.time_step)
+        self.time_end)
         
         return self.dates
         
@@ -40,10 +34,10 @@ class Hycom_Link_Creator:
             len('time_end=') + 
             len('yyyy-mm-dd'):]
         
-        for date in self.dates:
-            
-            time_start = date[0]
-            time_end = date[1]
+        for ii, jj in  zip (self.dates[0:len(self.dates):2], self.dates[1:len(self.dates):2]):
+
+            time_start = str(ii)
+            time_end = str(jj)
             
             self._links.append(slice1 + time_start +
              slice2 + time_end + slice3)
@@ -73,14 +67,12 @@ def main():
     
     url = ''.join(file)
 
-    mylist = Hycom_Link_Creator(url, '2017-02-01', '2017-06-01', 7)
+    mylist = Hycom_Link_Creator(url, '2017-01-01', '2017-01-31')
     mylist.create_dates()
     mylist.generate_urls()
     
     for ii in mylist:
         print(ii)
-    
-    
 
 if __name__ == "__main__":
     main()
