@@ -7,7 +7,10 @@ contact: gustavo.oceanografia@gmail.com
 #import urllib3
 
 import wget
-from links_generator import Hycom_Link_Creator
+import sys
+sys.path.append("..")
+
+from src.links_generator import Hycom_Link_Creator
 
     
 with open('hycom-url.txt','r') as file:
