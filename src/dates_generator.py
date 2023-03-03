@@ -7,7 +7,7 @@ import numpy as np
 
 class DatesGenerator:
 
-    def generateDates(self, date_min, date_max):
+    def generate_dates(self, date_min, date_max):
         
         self._dates = np.arange(np.datetime64(date_min),
         np.datetime64(date_max),
@@ -22,22 +22,16 @@ class DatesGenerator:
     @property
     def end_dates(self):
         return self._dates[1:len(self._dates):2]
+    
+    def get_dates(self):
+        return print(self._dates)
   
 
 def main():
     
     myobject = DatesGenerator()
-    myobject.generateDates('2016-12-02','2017-01-31')
+    myobject.generate_dates('2017-02-02','2017-02-28')
+    myobject.get_dates()
 
-    print(myobject.start_dates[0])
-    print()
-    print(myobject.end_dates[0])
-
-    
-    #print(myobject) 
-if __name__ == "__main__":
-    main() DatesGenerator:
-
-    
 if __name__ == "__main__":
     main()

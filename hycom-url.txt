@@ -1,1 +1,1 @@
-https://ncss.hycom.org/thredds/ncss/GLBv0.08/expt_57.2?var=water_u&var=water_v&north=-2&west=-39&east=-38&south=-3&disableProjSubset=on&horizStride=1&time_start=2017-06-01T12%3A00%3A00Z&time_end=2017-10-01T09%3A00%3A00Z&timeStride=1&vertCoord=&accept=netcdf4
+https://ncss.hycom.org/thredds/ncss/GLBv0.08/expt_92.9?var=water_u&var=water_v&north=-2&west=-39&east=-38&south=-3&disableProjSubset=on&horizStride=1&time_start=2017-06-01T00%3A00%3A00Z&time_end=2017-10-01T21%3A00%3A00Z&timeStride=1&vertCoord=&accept=netcdf4
