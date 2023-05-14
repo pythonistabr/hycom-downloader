@@ -18,7 +18,8 @@ class Hycom_Link_Creator:
     def create_dates(self):
         self.dates = time_creator.generate_dates(self.time_start, self.time_end)
         return self.dates
-        
+    
+
     def generate_urls(self):
         
         time_start_index = self.url.find('time_start')
