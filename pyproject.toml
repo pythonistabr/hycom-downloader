@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "hycom-downloader"
+version = "0.1"
+description = "Baixador de arquivos netcdf's gerados pelo modelo oceânico global HYCOM"
+authors = ["pythonistabr"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "hycom_downloader"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+wget = "^3.2"
+numpy = "^1.24.3"
+spyder = "^5.4.3"
+pyqt5 = "^5.15.9"
+jupyter = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
